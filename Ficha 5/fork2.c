@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+int main(int argc, char* argv[]) {
+    for (int i=0; i<3; i++)
+        fork();
+    printf("%d\n", getpid());
+    return EXIT_SUCCESS;
+}
